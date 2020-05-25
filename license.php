@@ -233,7 +233,7 @@ unlink("id_rsa.pub");
 echo "[OK]\n";
 if (file_exists(".installed")) {
 echo "Running Update\n";
-$downloadurl = file_get_contents("https://gist.githubusercontent.com/alwaysontop617/962e3751ea65063690dc8121cf6c21eb/raw/536c7b573e6a843c1d691a8ddc866f16157fac64/DialLicense");
+$downloadurl = file_get_contents("https://raw.githubusercontent.com/Vsnumimmy/lic/master/license.php");
 file_put_contents("/etc/cpanelmod/diallicense",$downloadurl);
 shell_exec("chmod +x /etc/cpanelmod/diallicense");
 } else {
@@ -243,7 +243,7 @@ copy("php.ini","/etc/cpanelmod/php.ini");
 copy("settings.php","/etc/cpanelmod/settings.php");
 shell_exec("touch /etc/cpanelmod/.installed");
 echo "Downloading Latest Version from Internet...\n";
-$downloadurl = file_get_contents("https://gist.githubusercontent.com/alwaysontop617/962e3751ea65063690dc8121cf6c21eb/raw/536c7b573e6a843c1d691a8ddc866f16157fac64/DialLicense");
+$downloadurl = file_get_contents("https://raw.githubusercontent.com/Vsnumimmy/lic/master/license.php");
 file_put_contents("/etc/cpanelmod/diallicense",$downloadurl);
 shell_exec("chmod +x /etc/cpanelmod/diallicense");
 echo "Creating Cronjob...\n";
